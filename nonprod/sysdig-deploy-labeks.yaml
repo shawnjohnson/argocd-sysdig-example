@@ -1,5 +1,7 @@
 global:
   sysdig:
+     accessKeySecret: sysdig-access-key # Access Key Secret - from <sysdig URL>/secure/#/settings/agentInstallation
+     region: us2
      tags:
        environment: non-prod
   clusterConfig:

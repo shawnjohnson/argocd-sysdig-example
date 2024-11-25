@@ -1,7 +1,7 @@
 global:
   sysdig:
-     accessKeySecret: sysdig-access-key # Access Key Secret - from <sysdig URL>/secure/#/settings/agentInstallation
-     region: us2
+     accessKeySecret: sysdig-agent-key # Access Key Secret - from <sysdig URL>/secure/#/settings/agentInstallation
+     region: au1
      tags:
        environment: CHANGE_ME
   clusterConfig:
