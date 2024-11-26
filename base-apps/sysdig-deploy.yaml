@@ -25,10 +25,11 @@ spec:
     targetRevision: 1.67.6
     helm:
       valueFiles:
-      - common/sysdig-deploy-common-clustershield-values.yaml
-      - nonprod/sysdig-deploy-labeks.yaml
+      - $values/common/sysdig-deploy-common-clustershield-values.yaml
+      - $values/nonprod/sysdig-deploy-labeks.yaml
   - repoURL: 'https://github.com/shawnjohnson/argocd-sysdig-example.git'
     targetRevision: main
+    ref: values
   project: default
   syncPolicy:
     automated: 
