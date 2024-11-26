@@ -19,11 +19,11 @@ spec:
   - name: sysdig-deploy-clustershield-audit
     kind: ValidatingWebhookConfiguration
     jqPathExpressions:
-    - .webhooks[].admissionReviewVersions[].clientConfig.caBundle
+    - .webhooks[] | select(.name | test("\\.secure\\.sysdig\\.com")).clientConfig.caBundle
   sources:
   - repoURL: 'https://charts.sysdig.com'
     chart: sysdig-deploy
-    targetRevision: 1.67.2
+    targetRevision: 1.67.6
     helm:
       valueFiles:
       - $values/common/sysdig-deploy-common-clustershield-values.yaml
